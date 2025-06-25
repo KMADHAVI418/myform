@@ -15,7 +15,7 @@ function ComplaintForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('https://backend-ayyk.onrender.com', formData);
+      await axios.post('https://backend-ayyk.onrender.com/submit', formData);
       alert('✅ Complaint submitted and saved!');
       setFormData({ name: '', issue: '', contact: '' });
     } catch (error) {
